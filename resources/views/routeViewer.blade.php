@@ -50,9 +50,9 @@
     <div class="mx-auto container">
         <section x-data="loadRoutes">
             <div class="flex flex-col lg:flex-row justify-between mb-8">
-                <h1 class="font-display text-3xl font-bold">Routes</h1>
+                <h1 class="font-display text-3xl shrink-0 font-bold">Route list</h1>
 
-                <div class="flex flex-wrap w-full justify-end lg:flex-nowrap items-center">
+                <div class="flex flex-wrap w-full lg:justify-end lg:flex-nowrap items-center">
                     <form class="w-full mt-6 lg:mt-0 w-fit lg:mr-4 flex-wrap lg:flex-nowrap -my-1 flex">
                         <label class="badge cursor-pointer my-1 mr-2 button badge--get transition-opacity" :class="methods.find(method => method === 'get') && 'active'">
                             <input type="checkbox" value="get" x-model="methods" class="hidden" />get
@@ -77,7 +77,7 @@
                         </label>
                     </form>
 
-                    <div class="relative mt-4 lg:mt-0 sm:max-w-xs w-full flex items-center ring-1 rounded-lg ring-slate-700 focus-within:ring-slate-500 transition-colors">
+                    <div class="relative mt-4 lg:mt-0 lg:max-w-xs w-full flex items-center ring-1 rounded-lg ring-slate-700 focus-within:ring-slate-500 transition-colors">
                         <input type="text" name="search" placeholder="Search..." class="block w-full rounded-md bg-transparent border-0 pr-12 shadow-sm focus:ring-0 sm:text-sm peer" x-ref="inputSearch" x-model="search" @keydown.window.prevent.cmd.k="$refs.inputSearch.focus()" @keydown.window.prevent.esc="$refs.inputSearch.blur()">
                         <kbd class="h-6 top-1/2 mr-1.5 -translate-y-1/2 absolute inset-y-0 right-0 flex py-1.5 items-center rounded border border-slate-700 px-2 font-sans text-sm font-medium text-slate-700 peer-focus:text-slate-500 peer-focus:border-slate-500 transition-colors">⌘K</kbd>
                     </div>
