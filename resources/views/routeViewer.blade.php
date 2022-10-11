@@ -42,7 +42,7 @@
         .badge--options { @apply bg-[#0284c7] text-white; }
 
         .uri span {
-            color: #cbd5e1;
+            color: #4FFA7C;
         }
     </style>
 </head>
@@ -86,7 +86,7 @@
             </div>
 
             <div class="overflow-hidden rounded-lg shadow ring-1 ring-slate-700">
-                <div class="overflow-x-auto">
+                <div class="overflow-scroll max-h-[80vh]">
                     <table class="bg-dark-gray min-w-full divide-y divide-slate-700">
                         <thead class="text-left text-sm font-medium">
                             <tr>
@@ -102,9 +102,9 @@
                             <template x-for="route in filteredRoutes">
                                 <tr class="font-mono">
                                     <td class="whitespace-nowrap py-4 pl-4 pr-3 sm:pl-6">
-                                        <ul class="flex">
+                                        <ul class="flex flex-wrap -mx-1 -my-0.5 w-full min-w-[100px] max-w-[200px]">
                                             <template x-for="method in route.methods">
-                                                <li x-text="method" class="badge mr-2 last:mr-0" :class="'badge--' + method.toLowerCase()"></li>
+                                                <li x-text="method" class="mx-1 my-0.5 badge mr-2 last:mr-0" :class="'badge--' + method.toLowerCase()"></li>
                                             </template>
                                         </ul>
                                     </td>
@@ -131,8 +131,11 @@
         function loadRoutes() {
             const allMethodsSelected = ['get', 'post', 'put', 'delete', 'patch', 'head', 'options'];
 
+            // const data = Object.values(<?php echo $routes; ?>);
+            const dummyData = [...Object.values(<?php echo $routes; ?>), ...Object.values(<?php echo $routes; ?>), ...Object.values(<?php echo $routes; ?>), ...Object.values(<?php echo $routes; ?>), ...Object.values(<?php echo $routes; ?>)];
+
             return {
-                data: Object.values(<?php echo $routes; ?>),
+                data: dummyData,
                 methods: allMethodsSelected,
                 search: "",
                 get filteredRoutes() {
@@ -147,8 +150,6 @@
                         const itemWithMiddleware = item?.middleware?.includes(query);
 
                         item?.uri?.replaceAll('{', '<span>{')?.replaceAll('}', '}</span>');
-
-                        console.log(item.uri);
 
                         if (itemWithMethods && (itemWithUri || itemWithName || itemWithAction || itemWithMiddleware)) return item;
                     });
