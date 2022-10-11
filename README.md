@@ -63,12 +63,18 @@ return [
 
 After installation, you can view the route list at `/route-viewer`.
 
+## Roadmap
+
+- [ ] Filtering and searching back-end
+- [ ] Add middleware to the `/route-viewer` route
+- [ ] More config variables
+- [ ] Move logic to separate classes as the package grows
+
 ## Credits
 
 - [Sjors](https://github.com/orgs/avocado-media/people/devsjors)
 - [Lars](https://github.com/orgs/avocado-media/people/larstw98)
 - [Sem](https://github.com/orgs/avocado-media/people/semammerlaan)
-- [All Contributors](../../contributors)
 
 ## License
 
