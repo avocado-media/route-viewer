@@ -39,7 +39,9 @@ class RouteController extends Controller
                     'methods' => $route->methods(),
                     'middleware' => $route->middleware()
                 ];
-            }),
+            })->sortBy(function($route) {
+                return $route['uri'];
+            })->values(),
         ]);
     }
 }
