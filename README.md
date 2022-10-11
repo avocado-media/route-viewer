@@ -46,6 +46,7 @@ return [
     */
 
     'ignored_routes' => [
+        '#^route-viewer#',
         '#^_debugbar#',
         '#^_ignition#',
         '#^routes$#'
