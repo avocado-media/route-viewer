@@ -18,6 +18,8 @@ class RouteController extends Controller
     {
         $routes = collect(Route::getRoutes());
 
+        // We exclude the ignored routes here by using regular expressions and
+        // matching it against the URIs of the routes we loop over
         foreach (config('route-viewer.ignored_routes') as $ignoredRoute) {
             $routes = $routes->filter(function ($value) use ($ignoredRoute) {
                 return !preg_match($ignoredRoute, $value->uri());
@@ -27,7 +29,7 @@ class RouteController extends Controller
         return view('route-viewer::routeViewer', [
             'routes' => $routes->transform(function ($route) {
                 return [
-                    'uri' => '/' . $route->uri(),
+                    'uri' => (config('route-viewer.slash_prefix') ? '/' : '') . $route->uri(),
                     'name' => $route->getName(),
                     'action' => 'Action',
                     'methods' => $route->methods(),
