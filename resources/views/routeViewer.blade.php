@@ -42,7 +42,7 @@
         .badge--options { @apply bg-[#0284c7] text-white; }
 
         .uri span { color: #4FFA7C; }
-        .action span { color: #ECFB6F; }
+        .action span { color: #fde047; }
     </style>
 </head>
 
@@ -101,9 +101,9 @@
                             <template x-for="route in filteredRoutes">
                                 <tr class="font-mono">
                                     <td class="whitespace-nowrap py-4 pl-4 pr-3 sm:pl-6">
-                                        <ul class="flex flex-wrap -mx-1 -my-0.5 w-full min-w-[100px] max-w-[200px]">
+                                        <ul class="flex flex-wrap -my-0.5 w-full min-w-[100px] max-w-[200px]">
                                             <template x-for="method in route.methods">
-                                                <li x-text="method" class="mx-1 my-0.5 badge mr-2 last:mr-0" :class="'badge--' + method.toLowerCase()"></li>
+                                                <li x-text="method" class="my-0.5 badge mr-2 last:mr-0" :class="'badge--' + method.toLowerCase()"></li>
                                             </template>
                                         </ul>
                                     </td>
