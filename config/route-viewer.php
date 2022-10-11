@@ -22,12 +22,13 @@ return [
     | Here you may specify what routes should be ignored from the route list by
     | using regular expressions.
     |
-    | Read more at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+    | See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+    | for more information about regular expressions.
     |
     */
 
     'ignored_routes' => [
-        '/route-viewer',
+        '#^route-viewer#',
         '#^_debugbar#',
         '#^_ignition#',
         '#^routes$#'
