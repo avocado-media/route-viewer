@@ -1,4 +1,4 @@
-# This is my package hackathon
+# This is my package route-viewer
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
@@ -7,13 +7,13 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require avocado-media/hackathon
+composer require avocado-media/route-viewer
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="hackathon-config"
+php artisan vendor:publish --tag="route-viewer-config"
 ```
 
 This is the contents of the published config file:
@@ -26,7 +26,7 @@ return [
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag="hackathon-views"
+php artisan vendor:publish --tag="route-viewer-views"
 ```
 
 ## Usage
