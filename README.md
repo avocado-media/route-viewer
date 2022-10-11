@@ -1,6 +1,6 @@
-# This is my package route-viewer
+# Pimp my route:list
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Simple package to view, search, filter route:list in the browser
 
 ## Installation
 
@@ -20,19 +20,18 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'ignored_routes' => [
+        '#^_debugbar#',
+        '#^_ignition#',
+        '#^routes$#'
+    ],
 ];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="route-viewer-views"
 ```
 
 ## Usage
 
 ```php
-After installation you can view the routes table at "/route-viewer"  
+After installation view the routes table at "/route-viewer"  
 ```
 
 ## Testing
