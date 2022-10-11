@@ -1,6 +1,8 @@
 # Pimp my route:list
 
-Simple package to view, search, filter route:list in the browser
+Simple package to view, search, and filter `route:list` in the browser, created at
+the [Dutch Laravel Foundation](https://dutchlaravelfoundation.nl/) meet-up. This package
+is inspired by https://github.com/garygreen/pretty-routes.
 
 ## Installation
 
@@ -19,6 +21,8 @@ php artisan vendor:publish --tag="route-viewer-config"
 This is the contents of the published config file:
 
 ```php
+<?php
+
 return [
 
     /*
@@ -41,7 +45,7 @@ return [
     | Here you may specify what routes should be ignored from the route list by
     | using regular expressions.
     |
-    | Read more at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+    | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
     |
     */
 
@@ -57,19 +61,7 @@ return [
 
 ## Usage
 
-```php
-After installation view the routes table at "/route-viewer"  
-```
-
-## Testing
-
-```bash
-composer test
-```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+After installation, you can view the route list at `/route-viewer`.
 
 ## Credits
 

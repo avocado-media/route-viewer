@@ -12,8 +12,7 @@ class RouteController extends Controller
      * Shows the view for displaying all the routes. We collect all the routes and
      * filter them by the ignored routes defined in the package's config file.
      *
-     * See https://laravel.com/api/9.x/Illuminate/Routing/Route.html for more
-     * information about the Illuminate\Routing\Route class.
+     * https://laravel.com/api/9.x/Illuminate/Routing/Route.html
      *
      * @return View
      */
@@ -39,7 +38,7 @@ class RouteController extends Controller
                     'methods' => $route->methods(),
                     'middleware' => $route->middleware()
                 ];
-            })->sortBy(function($route) {
+            })->sortBy(function ($route) {
                 return $route['uri'];
             })->values(),
         ]);
