@@ -50,7 +50,12 @@
     <div class="mx-auto container">
         <section x-data="loadRoutes">
             <div class="flex flex-col lg:flex-row justify-between mb-8">
-                <h1 class="font-display text-3xl shrink-0 font-bold">Route list</h1>
+                <h1 class="flex font-display text-3xl shrink-0 font-bold">
+                    Route list
+                    <div class="ml-1.5">
+                        (<span x-text="data.length"></span>)
+                    </div>
+                </h1>
 
                 <div class="flex flex-wrap w-full lg:justify-end lg:flex-nowrap items-center">
                     <form class="w-full mt-6 lg:mt-0 w-fit lg:mr-4 flex-wrap lg:flex-nowrap -my-1 flex">
@@ -128,14 +133,14 @@
 
     <script>
         function loadRoutes() {
-            const allMethodsSelected = ['get', 'post', 'put', 'delete', 'patch', 'head', 'options'];
+            const HTTP_REQUEST_METHODS = ['get', 'post', 'put', 'delete', 'patch', 'head', 'options'];
 
             return {
                 data: Object.values(<?php echo $routes; ?>),
-                methods: allMethodsSelected,
+                methods: HTTP_REQUEST_METHODS,
                 search: "",
                 get filteredRoutes() {
-                    if (this.search.length === 0 && this.methods === allMethodsSelected) return this.data;
+                    if (this.search.length === 0 && this.methods === HTTP_REQUEST_METHODS) return this.data;
                     return this.data.filter((item) => {
                         const query = this.search.toLowerCase();
 
