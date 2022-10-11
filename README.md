@@ -32,8 +32,7 @@ php artisan vendor:publish --tag="hackathon-views"
 ## Usage
 
 ```php
-$hackathon = new Avocadomedia\Hackathon();
-echo $hackathon->echoPhrase('Hello, Avocadomedia!');
+After installation you can view the routes table at "/route-viewer"  
 ```
 
 ## Testing
@@ -45,14 +44,6 @@ composer test
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
 ## Credits
 
