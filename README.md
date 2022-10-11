@@ -56,9 +56,9 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Sem](https://github.com/orgs/avocado-media/people/semammerlaan)
-- [Lars](https://github.com/orgs/avocado-media/people/larstw98)
 - [Sjors](https://github.com/orgs/avocado-media/people/devsjors)
+- [Lars](https://github.com/orgs/avocado-media/people/larstw98)
+- [Sem](https://github.com/orgs/avocado-media/people/semammerlaan)
 - [All Contributors](../../contributors)
 
 ## License
