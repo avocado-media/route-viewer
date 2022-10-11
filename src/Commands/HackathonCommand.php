@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Avocadomedia\Hackathon\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class HackathonCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'hackathon';
 
     public $description = 'My command';
 
