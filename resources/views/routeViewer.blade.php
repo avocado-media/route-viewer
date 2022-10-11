@@ -95,7 +95,7 @@
                         <thead class="text-left text-sm font-medium">
                             <tr>
                                 <th scope="col" class="py-3.5 pl-4 pr-3 sm:pl-6">Methods</th>
-                                <th scope="col" class="px-3 py-3.5">Path</th>
+                                <th scope="col" class="px-3 py-3.5">URI</th>
                                 <th scope="col" class="px-3 py-3.5">Name</th>
                                 <th scope="col" class="px-3 py-3.5">Action</th>
                                 <th scope="col" class="py-3.5 pl-3 pr-4">Middleware</th>
