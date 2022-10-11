@@ -1,6 +1,6 @@
 <?php
 
-namespace Avocadomedia\Hackathon;
+namespace AvocadoMedia\RouteViewer;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Route;
@@ -9,7 +9,8 @@ use Illuminate\View\View;
 class RouteController extends Controller
 {
     /**
-     * Shows the view for displaying all the routes.
+     * Shows the view for displaying all the routes. We collect all the routes and
+     * filter them by the ignored routes defined in the package's config file.
      *
      * @return View
      */
@@ -17,16 +18,16 @@ class RouteController extends Controller
     {
         $routes = collect(Route::getRoutes());
 
-        foreach (config('hackathon.ignored_routes') as $ignoredRoute) {
+        foreach (config('route-viewer.ignored_routes') as $ignoredRoute) {
             $routes = $routes->filter(function ($value) use ($ignoredRoute) {
                 return !preg_match($ignoredRoute, $value->uri());
             });
         }
 
-        return view('hackathon::routeList', [
+        return view('route-viewer::routeViewer', [
             'routes' => $routes->transform(function ($route) {
                 return [
-                    'uri' => $route->uri(),
+                    'uri' => '/' . $route->uri(),
                     'name' => $route->getName(),
                     'action' => 'Action',
                     'methods' => $route->methods(),

@@ -1,16 +1,16 @@
 <?php
 
-namespace Avocadomedia\Hackathon;
+namespace AvocadoMedia\RouteViewer;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class HackathonServiceProvider extends PackageServiceProvider
+class RouteViewerServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('hackathon')
+            ->name('route-viewer')
             ->hasConfigFile()
             ->hasViews()
             ->hasRoute('web');

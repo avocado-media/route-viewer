@@ -1,12 +1,12 @@
 {
-    "name": "avocado-media/hackathon",
+    "name": "avocado-media/route-viewer",
     "description": "This is my package hackathon",
     "keywords": [
         "avocado-media",
         "laravel",
-        "hackathon"
+        "route-viewer"
     ],
-    "homepage": "https://github.com/avocado-media/hackathon",
+    "homepage": "https://github.com/avocado-media/route-viewer",
     "license": "MIT",
     "authors": [
         {
@@ -30,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Avocadomedia\\Hackathon\\": "src"
+            "AvocadoMedia\\RouteViewer\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Avocadomedia\\Hackathon\\Tests\\": "tests"
+            "AvocadoMedia\\RouteViewer\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -55,10 +55,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Avocadomedia\\Hackathon\\HackathonServiceProvider"
+                "AvocadoMedia\\RouteViewer\\RouteViewerServiceProvider"
             ],
             "aliases": {
-                "Hackathon": "Avocadomedia\\Hackathon\\Facades\\Hackathon"
+                "RouteViewer": "AvocadoMedia\\RouteViewer\\Facades\\RouteViewer"
             }
         }
     },

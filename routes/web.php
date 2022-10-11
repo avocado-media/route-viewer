@@ -1,4 +1,4 @@
 <?php
 
-// Route for the route list view
-\Illuminate\Support\Facades\Route::get('/test-route', [\Avocadomedia\Hackathon\RouteController::class, 'index']);
+// The route for visiting the route list
+\Illuminate\Support\Facades\Route::get('/route-viewer', [\AvocadoMedia\RouteViewer\RouteController::class, 'index']);

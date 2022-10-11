@@ -1,5 +1,5 @@
 <?php
 
-use Avocadomedia\Hackathon\Tests\TestCase;
+use AvocadoMedia\RouteViewer\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
