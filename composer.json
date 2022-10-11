@@ -30,8 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Avocadomedia\\Hackathon\\": "src",
-            "Avocadomedia\\Hackathon\\Database\\Factories\\": "database/factories"
+            "Avocadomedia\\Hackathon\\": "src"
         }
     },
     "autoload-dev": {
