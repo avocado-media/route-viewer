@@ -1,6 +1,9 @@
 <?php
 
-// config for Avocadomedia/Hackathon
 return [
-
+    'ignored_routes' => [
+        '#^_debugbar#',
+        '#^_ignition#',
+        '#^routes$#'
+    ],
 ];

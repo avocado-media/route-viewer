@@ -2,6 +2,9 @@
 
 namespace Avocadomedia\Hackathon;
 
-class Hackathon
+use Illuminate\Routing\Controller;
+
+class Hackathon extends Controller
 {
+
 }
