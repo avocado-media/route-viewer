@@ -1,6 +1,6 @@
-# This is my package route-viewer
+# Pimp my route:list
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Simple package to view, search, filter route:list in the browser
 
 ## Installation
 
@@ -20,19 +20,45 @@ This is the contents of the published config file:
 
 ```php
 return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Slash Prefix
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify if every route displayed in the route viewer should be
+    | prefixed with a slash character (/) or not.
+    |
+    */
+
+    'slash_prefix' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Ignored Routes
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify what routes should be ignored from the route list by
+    | using regular expressions.
+    |
+    | Read more at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+    |
+    */
+
+    'ignored_routes' => [
+        '#^route-viewer#',
+        '#^_debugbar#',
+        '#^_ignition#',
+        '#^routes$#'
+    ],
+
 ];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="route-viewer-views"
 ```
 
 ## Usage
 
 ```php
-After installation you can view the routes table at "/route-viewer"  
+After installation view the routes table at "/route-viewer"  
 ```
 
 ## Testing

@@ -1,6 +1,6 @@
 {
     "name": "avocado-media/route-viewer",
-    "description": "This is my package hackathon",
+    "description": "Simple package to view, search, filter route:list in the browser",
     "keywords": [
         "avocado-media",
         "laravel",
