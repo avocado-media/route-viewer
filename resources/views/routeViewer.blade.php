@@ -41,9 +41,8 @@
         .badge--head { @apply bg-[#4338ca] text-white; }
         .badge--options { @apply bg-[#0284c7] text-white; }
 
-        .uri span {
-            color: #4FFA7C;
-        }
+        .uri span { color: #4FFA7C; }
+        .action span { color: #ECFB6F; }
     </style>
 </head>
 
@@ -110,7 +109,7 @@
                                     </td>
                                     <td class="whitespace-nowrap px-3 py-4 uri" x-html="route?.uri?.replaceAll('{', '<span>{')?.replaceAll('}', '}</span>')" />
                                     <td class="whitespace-nowrap px-3 py-4" x-text="route.name" />
-                                    <td class="whitespace-nowrap px-3 py-4" x-text="route.action" />
+                                    <td class="whitespace-nowrap px-3 py-4 action" x-html="route?.action?.replaceAll('@', '<span>@')" />
                                     <td class="whitespace-nowrap py-4 pl-3 pr-4">
                                         <ul class="flex">
                                             <template x-for="method in route.middleware">
@@ -131,11 +130,8 @@
         function loadRoutes() {
             const allMethodsSelected = ['get', 'post', 'put', 'delete', 'patch', 'head', 'options'];
 
-            // const data = Object.values(<?php echo $routes; ?>);
-            const dummyData = [...Object.values(<?php echo $routes; ?>), ...Object.values(<?php echo $routes; ?>), ...Object.values(<?php echo $routes; ?>), ...Object.values(<?php echo $routes; ?>), ...Object.values(<?php echo $routes; ?>)];
-
             return {
-                data: dummyData,
+                data: Object.values(<?php echo $routes; ?>),
                 methods: allMethodsSelected,
                 search: "",
                 get filteredRoutes() {
